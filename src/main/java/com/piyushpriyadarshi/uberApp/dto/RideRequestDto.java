@@ -1,14 +1,10 @@
 package com.piyushpriyadarshi.uberApp.dto;
 
-import com.piyushpriyadarshi.uberApp.entities.Rider;
 import com.piyushpriyadarshi.uberApp.entities.enums.PaymentMethod;
 import com.piyushpriyadarshi.uberApp.entities.enums.RideRequestStatus;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.locationtech.jts.geom.Point;
 
 import java.time.LocalDateTime;
 
@@ -30,5 +26,8 @@ public class RideRequestDto {
     private PaymentMethod paymentMethod;
 
     private RideRequestStatus rideRequestStatus;
+
+    private Double fare;
+
 
 }

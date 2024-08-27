@@ -1,6 +1,5 @@
 package com.piyushpriyadarshi.uberApp.strategies.impl;
 
-import com.piyushpriyadarshi.uberApp.dto.RideRequestDto;
 import com.piyushpriyadarshi.uberApp.entities.Driver;
 import com.piyushpriyadarshi.uberApp.entities.RideRequest;
 import com.piyushpriyadarshi.uberApp.repositories.DriverRepository;

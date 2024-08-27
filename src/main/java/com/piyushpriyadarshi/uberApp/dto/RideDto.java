@@ -1,21 +1,19 @@
 package com.piyushpriyadarshi.uberApp.dto;
 
-import com.piyushpriyadarshi.uberApp.entities.Driver;
-import com.piyushpriyadarshi.uberApp.entities.Rider;
 import com.piyushpriyadarshi.uberApp.entities.enums.PaymentMethod;
 import com.piyushpriyadarshi.uberApp.entities.enums.RideStatus;
-import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
+import lombok.Data;
 import org.locationtech.jts.geom.Point;
 
 import java.time.LocalDateTime;
 
+@Data
 public class RideDto {
 
 
     private Long id;
-    private Point pickupLocation;
-    private Point dropOffLocation;
+    private PointDto pickupLocation;
+    private PointDto dropOffLocation;
     private LocalDateTime createdTime;
     private RiderDto rider;
     private DriverDto driver;

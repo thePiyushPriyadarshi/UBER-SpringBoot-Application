@@ -1,6 +1,5 @@
 package com.piyushpriyadarshi.uberApp.services;
 
-import com.piyushpriyadarshi.uberApp.dto.RideDto;
 import com.piyushpriyadarshi.uberApp.dto.RideRequestDto;
 import com.piyushpriyadarshi.uberApp.entities.Driver;
 import com.piyushpriyadarshi.uberApp.entities.Ride;
@@ -15,9 +14,9 @@ public interface RideService {
 
     void matchWithDrivers(RideRequestDto rideRequestDto);
 
-    Ride createNewRide(RideRequestDto rideRequestDto, Driver driver);
+    Ride createNewRide(RideRequest rideRequest, Driver driver);
 
-    Ride updateRideStatus(Long rideId, RideStatus rideStatus);
+    Ride updateRideStatus(Ride ride, RideStatus rideStatus);
 
     Page<Ride> getAllRidesOfRider(Long riderId, PageRequest pageRequest);
 
