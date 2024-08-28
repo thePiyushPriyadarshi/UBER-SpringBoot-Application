@@ -3,11 +3,17 @@ package com.piyushpriyadarshi.uberApp.entities;
 import com.piyushpriyadarshi.uberApp.entities.enums.PaymentMethod;
 import com.piyushpriyadarshi.uberApp.entities.enums.PaymentStatus;
 import jakarta.persistence.*;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Payment {
 
     @Id

@@ -24,4 +24,10 @@ public class DriverController {
 
         return driverService.startRide(rideId,startRideDto.getOtp());
     }
+
+    @PostMapping("/endRide/{rideId}")
+    public RideDto endRide(@PathVariable Long rideId){
+
+        return driverService.endRide(rideId);
+    }
 }

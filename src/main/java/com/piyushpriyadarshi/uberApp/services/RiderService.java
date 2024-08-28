@@ -6,6 +6,8 @@ import com.piyushpriyadarshi.uberApp.dto.RideRequestDto;
 import com.piyushpriyadarshi.uberApp.dto.RiderDto;
 import com.piyushpriyadarshi.uberApp.entities.Rider;
 import com.piyushpriyadarshi.uberApp.entities.User;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
 
@@ -19,7 +21,7 @@ public interface RiderService {
 
     RiderDto getMyProfile();
 
-    List<RideDto> getAllMyRides();
+    Page<RideDto> getAllMyRides(PageRequest pageRequest);
 
     Rider createNewRider(User user);
 

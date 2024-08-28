@@ -4,6 +4,7 @@ import com.piyushpriyadarshi.uberApp.dto.RideRequestDto;
 import com.piyushpriyadarshi.uberApp.entities.Driver;
 import com.piyushpriyadarshi.uberApp.entities.Ride;
 import com.piyushpriyadarshi.uberApp.entities.RideRequest;
+import com.piyushpriyadarshi.uberApp.entities.Rider;
 import com.piyushpriyadarshi.uberApp.entities.enums.RideRequestStatus;
 import com.piyushpriyadarshi.uberApp.entities.enums.RideStatus;
 import com.piyushpriyadarshi.uberApp.exceptions.ResourceNotFoundException;
@@ -57,13 +58,14 @@ public class RideServiceImpl implements RideService {
     }
 
     @Override
-    public Page<Ride> getAllRidesOfRider(Long riderId, PageRequest pageRequest) {
-        return null;
+    public Page<Ride> getAllRidesOfRider(Rider rider, PageRequest pageRequest) {
+        return rideRepository.findByRider(rider,pageRequest);
     }
 
     @Override
-    public Page<Ride> getAllRidesOfDriver(Long driverId, PageRequest pageRequest) {
-        return null;
+    public Page<Ride> getAllRidesOfDriver(Driver driver, PageRequest pageRequest) {
+
+        return rideRepository.findByDriver(driver,pageRequest);
     }
 
 
